@@ -90,8 +90,14 @@ int TimeInSeconds ;
 
     @Then("Validate Time expired message")
     public void validate_time_expired_message() {
-
+        Assert.assertEquals("Time Expired!",driver.findElement(By.cssSelector("span")).getText());
     }
+
+    @Then("Close the browser")
+    public void close_the_browser() {
+        homePage.closeBrower();
+    }
+
 
 
 

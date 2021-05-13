@@ -24,26 +24,27 @@ public class HomePage extends TestBase {
 
    public void ValidatePageCompletelyLoaded() {
 
-      WebDriverWait wait=new WebDriverWait(driver,20);
-      WebElement element=wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("EggTimer-start-time-input-text")));
+      WebDriverWait wait = new WebDriverWait(driver, 20);
+      WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("EggTimer-start-time-input-text")));
 
    }
-   public void MaximizeBrowser(){
+
+   public void MaximizeBrowser() {
       driver.manage().window().maximize();
 
    }
 
-   public Boolean EditableBox(){
+   public Boolean EditableBox() {
       WebElement element = driver.findElement(By.id("EggTimer-start-time-input-text"));
-       element.isEnabled();
+      element.isEnabled();
       return true;
    }
 
-   public void StartButton(){
+   public void StartButton() {
       driver.findElement(By.cssSelector(".validTime")).click();
    }
 
-   public void sendTime(){
+   public void sendTime() {
       driver.findElement(By.id("EggTimer-start-time-input-text"));
    }
 
@@ -51,9 +52,14 @@ public class HomePage extends TestBase {
    public void AcceptAlert() throws InterruptedException {
       Thread.sleep(1000);
       Alert alert = driver.switchTo().alert();
-      String alertMessage= driver.switchTo().alert().getText();
+      String alertMessage = driver.switchTo().alert().getText();
       System.out.println(alertMessage);
       alert.accept();
 
    }
+
+   public void closeBrower() {
+      driver.quit();
+   }
 }
+

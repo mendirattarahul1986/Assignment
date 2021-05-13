@@ -26,6 +26,8 @@ Feature: Check whether website is working
          Given Timer is already Over
          Then Verify the PopUp is coming and click on OK Button
          Then Validate Time expired message
+         Then Close the browser
+
 
 
 
