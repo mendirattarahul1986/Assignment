@@ -11,3 +11,6 @@ To Run in Local Machine.
 5.  For running the test - Right click on TestRunner and run as test.
 6. After running the test -  In Test Output - there is PDF folder - Where ExtentReport will be generated
 
+
+Improvement :- Added some more test cases, Use the before class and after
+
