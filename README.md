@@ -11,7 +11,7 @@ To Run in Local Machine.
 5.  For running the test - Right click on TestRunner and run as test.
 6. After running the test -  In Test Output - there is PDF folder - Where ExtentReport will be generated
 
-Highlights :- Its a simple framework which anyone can understand and start using it 
+Highlights :- Its a BDD framework which is created using Cucumber , Java, Junit and the reports will be created in PDF format.
 
 
 Improvement :- Its doesnt run in Parellel browser, Haven't setup with Jenkins and dockers. That can be done. 
