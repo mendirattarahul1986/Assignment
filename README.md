@@ -12,7 +12,11 @@ To Run in Local Machine.
 6. After running the test -  In Test Output - there is PDF folder - Where ExtentReport will be generated
 
 Highlights :- Its a simple framework which anyone can understand and start using it 
+
+
 Improvement :- Its doesnt run in Parellel browser, Haven't setup with Jenkins and dockers. That can be done. 
+
+
 Known bugs :-  Its doesnt work with input value more than 60, as that stuff is still not added.
 
 
