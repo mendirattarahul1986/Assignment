@@ -15,7 +15,7 @@ public class TestBase {
     public TestBase() {
         try {
             prop = new Properties();
-            FileInputStream fis = new FileInputStream("/Users/Z002KR5/Downloads/TestAssignment/src/main/java/com/qa/config/config.properties");
+            FileInputStream fis = new FileInputStream("/src/main/java/com/qa/config/config.properties");
             prop.load(fis);
         } catch (IOException e) {
             e.getMessage();
@@ -27,11 +27,11 @@ public class TestBase {
             System.out.println(prop.getProperty("browser"));
             String browserName = prop.getProperty("browser");
             if (browserName.equals("chrome")) {
-                System.setProperty("webdriver.chrome.driver", "/Users/Z002KR5/Downloads/BDDTEST/chromedriver");
+                System.setProperty("webdriver.chrome.driver", "/chromedriver");
                 driver = new ChromeDriver();
             }
             else if(browserName.equals("firefox")) {
-                System.setProperty("webdriver.firefox.driver", "/Users/Z002KR5/Downloads/BDDTEST/firefoxdriver");
+                System.setProperty("webdriver.firefox.driver", "/firefoxdriver");
                 driver = new FirefoxDriver();
             }
             else {
