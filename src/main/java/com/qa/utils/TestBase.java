@@ -2,6 +2,7 @@ package com.qa.utils;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -24,15 +25,24 @@ public class TestBase {
         public static void initialzation() {
 
             System.out.println(prop.getProperty("browser"));
-            System.out.println(prop.getProperty("url"));
             String browserName = prop.getProperty("browser");
             if (browserName.equals("chrome")) {
                 System.setProperty("webdriver.chrome.driver", "/Users/Z002KR5/Downloads/BDDTEST/chromedriver");
                 driver = new ChromeDriver();
+            }
+            else if(browserName.equals("firefox")) {
+                System.setProperty("webdriver.firefox.driver", "/Users/Z002KR5/Downloads/BDDTEST/firefoxdriver");
+                driver = new FirefoxDriver();
+            }
+            else {
+                System.out.println("please pass the correct browser" + browserName);
             }
             driver.manage().deleteAllCookies();
             driver.get(prop.getProperty("url"));
 
 
         }
+
+
+
     }
